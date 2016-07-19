@@ -1,0 +1,6 @@
+framework module HandaBannerLibrary {
+  umbrella header "HandaBannerLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

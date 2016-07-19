@@ -20,10 +20,6 @@ it, simply add the following line to your Podfile:
 pod "HandaBannerLibrary"
 ```
 
-## Author
-
-dduk02, dduk02@handasoft.co.kr
-
 ## License
 
 HandaBannerLibrary is available under the MIT license. See the LICENSE file for more info.

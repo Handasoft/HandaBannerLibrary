@@ -1,0 +1,14 @@
+PODS:
+  - HandaBannerLibrary (0.1.0)
+
+DEPENDENCIES:
+  - HandaBannerLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  HandaBannerLibrary:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HandaBannerLibrary: 9ee4115a0b09a4cb30db06799561c0ff8764a143
+
+COCOAPODS: 0.39.0
