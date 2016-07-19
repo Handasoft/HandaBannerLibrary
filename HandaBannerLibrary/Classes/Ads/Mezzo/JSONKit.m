@@ -722,16 +722,16 @@ static void _JKArrayRemoveObjectAtIndex(JKArray *array, NSUInteger objectIndex) 
   array->count--;
 }
 
-- (void)dealloc
-{
-  if(JK_EXPECT_T(objects != NULL)) {
-    NSUInteger atObject = 0UL;
-    for(atObject = 0UL; atObject < count; atObject++) { if(JK_EXPECT_T(objects[atObject] != NULL)) { objects[atObject] = NULL; } }
-    free(objects); objects = NULL;
-  }
-  
-  [super dealloc];
-}
+//- (void)dealloc
+//{
+//  if(JK_EXPECT_T(objects != NULL)) {
+//    NSUInteger atObject = 0UL;
+//    for(atObject = 0UL; atObject < count; atObject++) { if(JK_EXPECT_T(objects[atObject] != NULL)) { objects[atObject] = NULL; } }
+//    free(objects); objects = NULL;
+//  }
+//  
+//  [super dealloc];
+//}
 
 - (NSUInteger)count
 {
@@ -841,11 +841,11 @@ static void _JKArrayRemoveObjectAtIndex(JKArray *array, NSUInteger objectIndex) 
   return(self);
 }
 
-- (void)dealloc
-{
-  if(collection != NULL) { collection = NULL; }
-  [super dealloc];
-}
+//- (void)dealloc
+//{
+//  if(collection != NULL) { collection = NULL; }
+//  [super dealloc];
+//}
 
 - (NSArray *)allObjects
 {
@@ -943,20 +943,20 @@ static JKDictionary *_JKDictionaryCreate(id *keys, NSUInteger *keyHashes, id *ob
   return(dictionary);
 }
 
-- (void)dealloc
-{
-  if(JK_EXPECT_T(entry != NULL)) {
-    NSUInteger atEntry = 0UL;
-    for(atEntry = 0UL; atEntry < capacity; atEntry++) {
-      if(JK_EXPECT_T(entry[atEntry].key    != NULL)) { entry[atEntry].key    = NULL; }
-      if(JK_EXPECT_T(entry[atEntry].object != NULL)) { entry[atEntry].object = NULL; }
-    }
-  
-    free(entry); entry = NULL;
-  }
-
-  [super dealloc];
-}
+//- (void)dealloc
+//{
+//  if(JK_EXPECT_T(entry != NULL)) {
+//    NSUInteger atEntry = 0UL;
+//    for(atEntry = 0UL; atEntry < capacity; atEntry++) {
+//      if(JK_EXPECT_T(entry[atEntry].key    != NULL)) { entry[atEntry].key    = NULL; }
+//      if(JK_EXPECT_T(entry[atEntry].object != NULL)) { entry[atEntry].object = NULL; }
+//    }
+//  
+//    free(entry); entry = NULL;
+//  }
+//
+//  [super dealloc];
+//}
 
 static JKHashTableEntry *_JKDictionaryHashEntry(JKDictionary *dictionary) {
   NSCParameterAssert(dictionary != NULL);
@@ -2131,11 +2131,11 @@ static void _JSONDecoderCleanup(JSONDecoder *decoder) {
   }
 }
 
-- (void)dealloc
-{
-  _JSONDecoderCleanup(self);
-  [super dealloc];
-}
+//- (void)dealloc
+//{
+//  _JSONDecoderCleanup(self);
+//  [super dealloc];
+//}
 
 - (void)clearCache
 {
