@@ -1,0 +1,6 @@
+use_frameworks!
+target 'HandaBannerLibrary_Tests' do
+  pod 'HandaBannerLibrary', :path => '../'
+  
+  
+end
