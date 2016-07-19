@@ -560,7 +560,7 @@
     }
 }
 - (void)didFailReceiveAd:(ADBanner*)adBanner errorType:(NSInteger)errorType {
-    NSLog(@"메조 배너 에러 %d", errorType);
+    NSLog(@"메조 배너 에러 %ld", errorType);
     if(errorType != 0 && [[HandaAdController Access] getBannerCount] >= 1){
         [HandaAdController Access].nFailCountBanner++;
         [self removeAdBanner];
@@ -747,7 +747,7 @@
 }
 
 - (void)didFailReceiveInterstitial:(NSInteger)errorType {
-    NSLog(@"메조 전면 에러 %d", errorType);
+    NSLog(@"메조 전면 에러 %ld", errorType);
     // 전면 광고 수신 실패
     isShowingInterstitial = NO;
     if(errorType != 0){
