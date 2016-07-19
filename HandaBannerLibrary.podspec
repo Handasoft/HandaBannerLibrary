@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HandaBannerLibrary'
-  s.version          = '0.1.11'
+  s.version          = '0.1.12'
   s.summary          = 'Library for Handasoft Corp.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,12 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'HandaBannerLibrary/Classes/**/*'
-  
+
+    s.subspec 'no-arc' do |sp|
+    sp.source_files = 'JSONKit.{h,m}'
+    sp.requires_arc  = false
+    sp.compiler_flags = '-fno-objc-arc'
+    end
   # s.resource_bundles = {
   #   'HandaBannerLibrary' => ['HandaBannerLibrary/Assets/*.png']
   # }
