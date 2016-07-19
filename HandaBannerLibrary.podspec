@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HandaBannerLibrary'
-  s.version          = '0.1.19'
+  s.version          = '0.1.2'
   s.summary          = 'Library for Handasoft Corp.'
 
 # This description is used to generate tags and improve search results.
